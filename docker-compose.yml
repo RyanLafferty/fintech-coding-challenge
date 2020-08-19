@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  fintech-coding-challenge-db:
+    container_name: fintech-coding-challenge-db
+    build:
+      context: .
+      dockerfile: ./config/db/Dockerfile
+    environment:
+      FIRESTORE_PORT: 5432
+    ports:
+      - "5432:5432"
+  fintech-coding-challenge-api:
+    container_name: fintech-coding-challenge-api-dev
+    build:
+      context: .
+      dockerfile: ./config/api/Dockerfile
+    environment:
+      PORT: 8080
+    ports:
+      - "8080:8080"

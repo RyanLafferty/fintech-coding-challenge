@@ -1,0 +1,11 @@
+# deps
+node_modules
+
+# builds
+build
+
+# coverage
+coverage
+
+# default test output file
+test-files/output.txt
